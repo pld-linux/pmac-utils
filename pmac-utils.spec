@@ -5,7 +5,8 @@ Version:	2.1
 Release:	5
 License:	GPL
 Group:		Applications/System
-Source0:	%{name}-%{version}.tar.gz
+Source0:	pmac-utils-%{version}.tar.gz
+# Source0-md5:	afbdcb97cd036f0c55204e05bac5f38e
 Patch0:		%{name}-2.1-ydl.patch
 BuildRequires:	sgml-tools
 ExclusiveArch:	ppc
