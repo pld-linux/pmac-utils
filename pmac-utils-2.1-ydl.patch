@@ -1,0 +1,39 @@
+diff -uNr pmac-utils-2.1.orig/Makefile pmac-utils-2.1/Makefile
+--- pmac-utils-2.1.orig/Makefile	Fri Nov 17 21:57:14 2000
++++ pmac-utils-2.1/Makefile	Tue Jan 15 23:31:53 2002
+@@ -7,7 +7,7 @@
+ # Version:      @(#)Makefile  1.01  06-May-1997  Richard van Hees
+ #	hacked to shreds 04-July-2000	 Hollis Blanchard <hollis@andrew.cmu.edu>
+ 
+-prefix =
++prefix = /
+ exec_prefix = ${prefix}
+ usr_prefix  = ${prefix}/usr
+ bindir	 = $(exec_prefix)/bin
+@@ -15,9 +15,9 @@
+ ubindir  = $(usr_prefix)/bin
+ sbindir  = $(exec_prefix)/sbin
+ usbindir = $(usr_prefix)/sbin
+-mandir	 = $(usr_prefix)/man
+-man1dir  = $(usr_prefix)/man/man1
+-man8dir  = $(usr_prefix)/man/man8 
++mandir	 = $(usr_prefix)/share/man
++man1dir  = $(mandir)/man1
++man8dir  = $(mandir)/man8 
+ 
+ SGMLMAN	= sgml2txt -man
+ CC	= gcc -Wall -Wstrict-prototypes
+diff -uNr pmac-utils-2.1.orig/macos pmac-utils-2.1/macos
+--- pmac-utils-2.1.orig/macos	Thu Jul  6 03:45:32 2000
++++ pmac-utils-2.1/macos	Tue Jan 15 22:31:10 2002
+@@ -2,5 +2,8 @@
+ 
+ export PATH=/sbin
+ 
+-nvsetenv boot-device "hd:,\\:tbxi"
+-exec shutdown -r now
++echo "The macos scrupt has been removed from YDL as it resets some Open Firmware variables without user"
++echo "interaction. Experienced users may use nvsetenv to accomplish this script's former functionality."
++
++#nvsetenv boot-device "hd:,\\:tbxi"
++#exec shutdown -r now
