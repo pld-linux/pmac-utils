@@ -2,7 +2,7 @@ Summary:	PowerPC Linux system utilities
 Summary(pl):	Narzêdzia systemowe dla PowerPC
 Name:		pmac-utils
 Version:	2.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/System
 Source0:	pmac-utils-%{version}.tar.gz
