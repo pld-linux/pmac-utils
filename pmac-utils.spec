@@ -1,10 +1,10 @@
-
 Summary:	PowerPC Linux system utilities
+Summary(pl):	Narzêdzia systemowe dla PowerPC
 Name:		pmac-utils
 Version:	2.1
 Release:	4
-Group:		Applications/System
 License:	GPL
+Group:		Applications/System
 Source0:	%{name}-%{version}.tar.gz
 Patch0:		%{name}-2.1-ydl.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,9 +19,9 @@ stored in PRAM).
 
 %description -l pl
 Aplikacje specyficzne dla architektury PowerPC takie jak:
-macos - skrypt do restartu systemu MacOS,
-nvsetenv - narzedzie do konfiguracji zmeinnych Open Firmware
-nvvideo - narzedzie do konfiguracji parametrow obrazu w PRAM
+- macos - skrypt do restartu systemu MacOS,
+- nvsetenv - narzêdzie do konfiguracji zmiennych Open Firmware,
+- nvvideo - narzêdzie do konfiguracji parametrów obrazu w PRAM.
 
 %prep
 %setup -q -n pmac-utils-%{version}
@@ -39,7 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(-, root, root)
 %attr(755,root,root) %{_sbindir}/macos
 %attr(755,root,root) %{_sbindir}/nvsetenv
 %attr(755,root,root) %{_sbindir}/nvvideo
