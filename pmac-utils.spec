@@ -29,11 +29,15 @@ Aplikacje specyficzne dla architektury PowerPC takie jak:
 %patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT exec_prefix=%{_prefix} install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	exec_prefix=%{_prefix}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
