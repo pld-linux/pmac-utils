@@ -1,5 +1,5 @@
 Summary:	PowerPC Linux system utilities
-Summary(pl.UTF-8):   Narzędzia systemowe dla PowerPC
+Summary(pl.UTF-8):	Narzędzia systemowe dla PowerPC
 Name:		pmac-utils
 Version:	2.1
 Release:	6
