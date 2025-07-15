@@ -26,7 +26,7 @@ Aplikacje specyficzne dla architektury PowerPC takie jak:
 
 %prep
 %setup -q -n pmac-utils-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} \
